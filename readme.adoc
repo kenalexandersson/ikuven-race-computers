@@ -4,10 +4,10 @@
 
 == Förberedelser innan tävling
 
-Kontakta/tillfråga medhjälpare::
+=== Kontakta/tillfråga medhjälpare
 Tävlingsledare har i regel påbörjat processen, men det är bra om datoransvarig fortsätter med att samla ihop laget.
 
-Förbered datorbeställning::
+=== Förbered datorbeställning
 Arenaansvarig sköter den totala beställningen mot IK Uven, vilken läggs senast två veckor innan tävlingsstart. Datoransvarig ser till att sammanställa den del av beställningen som rör datorer och kontroller och skickar sedan detta till arenaansvarig. För att ordna beställningen behöver följande redas ut:
 
 * Antal datorer som behövs
@@ -38,7 +38,9 @@ Typiska användningsområden för tävlingsdatorer
 [TIP]
 Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
 
-*Förbered beställning av basenheter (kontroller, också benämnda SI-enheter)*
+=== Förbered beställning av basenheter
+
+Basenheter benämns ibland som kontroller, och även SI-enheter
 
 Om speaker används på tävling måste basenheter med seriekabel för
 speakerstöd beställas, i regel två stycken.
@@ -58,10 +60,12 @@ Kontakta startansvarig angående
 [TIP]
 Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
 
-Fyll i datordel av beställning::
-När datorbeställning är färdigutredd fyll i datordelen av beställningsdokumentet, skicka sedan till arenaansvarig.
+=== Fyll i datordel av beställning
+När datorbeställning är färdigutredd - fyll i basenhetsdel och datordel av beställningsdokumentet.
 
-== Vid hämtning av datorer hos IP Skogen
+Skicka sedan till arenaansvarig.
+
+== Hämtning av datorer IP Skogen
 
 Datorer och kringprylar får plats i en normalstor bil (typ Opel Corsa, Kia Niro, Volvo V40) om säten fälls och utan medpassagerare.
 
@@ -70,28 +74,37 @@ Datorer och kringprylar får plats i en normalstor bil (typ Opel Corsa, Kia Niro
 * Om hämtning av Sportidentpinnar/brickor, kontrollera ifall brickor saknas och inte har markerats (de brukar markeras med gult om de saknas)
 
 
-== Förberedelser samt torrkörning av datorer
+== Förberedelser av datorer
 
-Ett par dagar innan tillfället: Hör med tävlingssekreteraren vilken OLA-version de har använt vid skapande av tävling.
+Ett par dagar innan tillfället: Hör med tävlingssekreteraren vilken OLA-version de har använt vid skapande av tävling, ladda ned denna och lägg på dropbox.
 
-Installera/uppgradera datorer med den OLA-version som ska användas::
+[NOTE]
+Endast _Administratör_ eller _Arrangemengsansvarig_ på klubbens Eventor-sida kan ladda ner OLA.
+
+=== Installera/uppgradera OLA
+
+Installera/uppgradera datorer med den OLA-version som ska användas. På IP Skogens datorer finns OLA sedan gammalt, så det handlar oftast om att uppgradera. Hör med tävlingssekreteraren vilken version som använts för att skapa tävlingsfiler.
+
 OLA-version för tävling: 5.10.1
 
-Programmera (ställa tid) på master SI-enhet (kontroll)::
+=== Ställ tid på master SI-enhet (kontroll)
+
 . Ställ in klockan på serverdator
 . Sportident config, se bild
 
----
-Trådlös router::
+
+=== Trådlös router
+
 * WLAN: SSID GOF_ASUS, WPA2, lösenord: OLGOFOLGOF
 * Router fast IP 192.168.18.101/24
 * delar ut 192.168.18.102 - 192.168.18.254
 * login: admin/admin2
 
----
-Datorer::
-Nedan tabell sammanställer vilka datorer som används under tävling
+Koppla router till serverdator med nätverkskabel
 
+
+=== Datorer
+Nedan tabell sammanställer vilka datorer som brukar användas under tävling
 
 [width="100%",options="header"]
 |====================
@@ -100,19 +113,20 @@ Nedan tabell sammanställer vilka datorer som används under tävling
 |192.168.18.23 |GOF23 |Mål + Skrivare 1 | Nej 
 |192.168.18.24 |GOF24 |Mål + Skrivare 2 | Nej 
 |192.168.18. |GOF27 |Direktanmälan | Nej 
-|192.168.18.180 |GOF31 |Direktanmälan | Nej 
+|192.168.18. |GOF31 |Direktanmälan | Nej 
 |192.168.18. |GOF34 |Speaker + 2 målenheter | Ja 
 |192.168.18. |GOF35 |Speaker | Ja
 |192.168.18. |GOF33 |Ändringsdator | Ja
 |192.168.18. |GOF36 |Utskrifter | Ja
 |====================
 
-Datorer lösenord::
+=== Datorer lösenord
 * GOF/GOF
 * Admin/GOF (gamla), Admin/IPSkogen (nya)
 
----
-Server::
+
+=== Server
+
 Börja med att förbereda OLA-server. För att serverprogrammet ska svara korrekt, måste tävling skapas. Detta görs genom att först start OLA-klient och skapa tävling där.
 
 . Starta OLA-klient
@@ -132,33 +146,33 @@ Börja med att förbereda OLA-server. För att serverprogrammet ska svara korrek
 .. Kontakt med servern är upprättad om man kan se en välkomstsida för OLA.
 .. Om ingen kontakt, se <<netnot>>
 
-Apa
-
-* ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server
-* kör PingInfoView mot alla klienter
-* kör LiveResults_client direkt mot databasens .h2-fil
+==== På tävlingsdagen
+* Ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server
+* Kör PingInfoView mot alla klienter
+* Kör LiveResults_client direkt mot databasens .h2-fil
 
 [#netnot]
-Nätverksrelaterade noteringar (server):
+=== Nätverksrelaterade noteringar (server)
 
 * Brandvägg kan vara på, kolla Windows Defender "tillåtna appar":
     Java (OLA) får inte vara blockerad i lång lista (sortera på block/allow)
     
-* Om det inte går att kontakta server, stäng av Windows Defender helt
+* Om det ändå inte går att kontakta server, stäng av Windows Defender helt
 
 * Port 8080 behöver inte öppnas explicit
 
 * Om server IP ej pingbar: avancerade delningsinställningar ->
     aktivera fil och skrivardelning.
 
----
-Direktanmälan::
+
+=== Direktanmälan
+
 * wifi
 * en master per dator, ställ in COM-port, kolla att bricknummer läses in
 
-Ställa in master (avläsare)
+Ställa in master (avläsare)::
 
-. Se till OLA är startat och uppkopplad mot server
+. Se till att OLA-klient är startad och uppkopplad mot server
 
 . Koppla in master till dator i USB-uttag
 
@@ -180,8 +194,8 @@ Ställa in master (avläsare)
 . Använd en SI-pinne i master
 .. Förväntat resultat: Att pinnen registreras och att bricknummer läses in
 
----
-Måldatorer::
+
+=== Måldatorer
 
 * tråd i husvagn (dra lång kabel mellan vagnarna)
 * en master per dator, kolla COM-port
@@ -190,13 +204,13 @@ Måldatorer::
   någon gammal tävling
 * utskrift från OLA kräver pinne som är registrerad i tävlingen
 
----
-Speaker::
+
+=== Speakerdatorer
 - wifi
 - 2 x målenhet + lång kabel + serial-to-USB till samma dator
 - den andra är enbart för OLA klient
 
-== Föreberedelser kontroller
+=== Föreberedelser kontroller
 
 Timemaster, togglar mellan tre funktioner::
 * TIMEMA: ställ bara tid
@@ -210,10 +224,10 @@ Timemaster, togglar mellan tre funktioner::
 ** de gamla målenheterna
 ** alla datorer
 
-== Tävlingsdagen:
+== Tävlingsdagen
 
 Prio-ordning::
-. Server
+. Server + Router + uppkoppling till internet via telefon eller surfplatta
 . Måldatorer inkl. kabel till målvagn
 . Direktanmälan
 . Speaker, Målenheter, Ändring
@@ -221,3 +235,12 @@ Prio-ordning::
 . Live-resultat
 
 När allt uppkopplat - lägg in slutgiltiga IP-adresser i PingInfoView.
+
+Servern behöver tillgång till internet för att ladda upp live-resultat.
+
+Routern används för att övriga datorer i det lokala nätverket ska kunna koppla upp sig mot server (de behöver alltså inte internetaccess).
+
+[TIP]
+Sträva efter att koppla upp Måldatorer samt Direktanmälandatorer med ethernetkablar om möjligt. Det finns en switch i nätverkslådan som kan användas om det blir trångt i routern.
+
+
