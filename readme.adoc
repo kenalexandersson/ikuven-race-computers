@@ -1,39 +1,42 @@
-Arbetslista för datoransvarig vid orienteringstävling
+:toc: left
+
+= Datoransvarig vid orienteringstävling
 
 == Förberedelser innan tävling
 
-*Kontakta/tillfråga medhjälpare*
+Kontakta/tillfråga medhjälpare::
 Tävlingsledare har i regel påbörjat processen, men det är bra om datoransvarig fortsätter med att samla ihop laget.
 
-*Förbered datorbeställning*
+Förbered datorbeställning::
 Arenaansvarig sköter den totala beställningen mot IK Uven, vilken läggs senast två veckor innan tävlingsstart. Datoransvarig ser till att sammanställa den del av beställningen som rör datorer och kontroller och skickar sedan detta till arenaansvarig. För att ordna beställningen behöver följande redas ut:
 
-- Antal datorer som behövs
--- Antal tävlingsdatorer
--- Antal måldatorer för avläsning
+* Antal datorer som behövs
+** Antal tävlingsdatorer
+** Antal måldatorer för avläsning
 
 Typiska användningsområden för tävlingsdatorer
 
-- 1 som agerar OLA-server som övriga kopplar upp sig till
-- 1 som används i sekreteriat som ändringsdator
-- 1 som används i sekreteriat för utskrifter 
-- 1 som används av speaker + 2 målenheter (håller koll på personer som går i mål)
-- 1 som används av speaker (för OLA-klient)
-- 2 som används av direktanmälan
+* 1 som agerar OLA-server som övriga kopplar upp sig till
+* 1 som används i sekreteriat som ändringsdator
+* 1 som används i sekreteriat för utskrifter 
+* 1 som används av speaker + 2 målenheter (håller koll på personer som går i mål)
+* 1 som används av speaker (för OLA-klient)
+* 2 som används av direktanmälan
 
-- Antal skrivare
--- Sträcktidsskrivare (för utskrift vid målgång)
--- Laserskrivare (till bl a sekreteriat)
--- Pappersrullar till sträcktidsskrivare (OBS, behövs oftast inte beställas, finns i regel att tillgå i Bunketorp)
--- Papper till laserskrivare (OBS, behövs oftast inte beställas, finns i regel att tillgå i Bunketorp)
+* Antal skrivare
+** Sträcktidsskrivare (för utskrift vid målgång)
+** Laserskrivare (till bl a sekreteriat)
+** Pappersrullar till sträcktidsskrivare (OBS, behövs oftast inte beställas, finns i regel att tillgå i Bunketorp)
+** Papper till laserskrivare (OBS, behövs oftast inte beställas, finns i regel att tillgå i Bunketorp)
 
-- Datortillbehör
--- Router
--- Tillbehörsväska (meed bl a switchar)
--- Nätverkslåda (med ethernetkablar mm)
--- Väska med nödkit
+* Datortillbehör
+** Router
+** Tillbehörsväska (med bl a switchar)
+** Nätverkslåda (med ethernetkablar mm)
+** Väska med nödkit
 
-Tips: Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
+[TIP]
+Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
 
 *Förbered beställning av basenheter (kontroller, också benämnda SI-enheter)*
 
@@ -42,81 +45,89 @@ speakerstöd beställas, i regel två stycken.
 
 Kontakta banläggare för att få reda på vilka kontroller som kommer användas. Notera att i ett tidigt skede kanske banläggare inte har utsättningsbanorna klara i detalj, det viktigaste inför beställningen är att få reda på antalet kontroller.
 
-- Antal kontroller som behövs
-- Vilka kontroller som används för varje utsättningsbana (om klart, behövs egentligen senare vid konfiguration och test av kontroller)
-- Om det finns kontroller som ska ha fler än en enhet (oftast kontroll 100 och 200), och i så fall hur många
+* Antal kontroller som behövs
+* Vilka kontroller som används för varje utsättningsbana (om klart, behövs egentligen senare vid konfiguration och test av kontroller)
+* Om det finns kontroller som ska ha fler än en enhet (oftast kontroll 100 och 200), och i så fall hur många
 
 Kontakta startansvarig angående
 
-- Antal basenheter för Start
-- Antal basenheter för Töm
-- Antal basenheter för Check
+* Antal basenheter för Start
+* Antal basenheter för Töm
+* Antal basenheter för Check
 
-Tips: Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
+[TIP]
+Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
 
-*Fyll i datordel av beställning*
+Fyll i datordel av beställning::
 När datorbeställning är färdigutredd fyll i datordelen av beställningsdokumentet, skicka sedan till arenaansvarig.
 
 == Vid hämtning av datorer hos IP Skogen
 
 Datorer och kringprylar får plats i en normalstor bil (typ Opel Corsa, Kia Niro, Volvo V40) om säten fälls och utan medpassagerare.
 
-- Kontrollera så att router kommer med (om beställd)
-- Laserskrivare finns i lådor av olika storlek, ta de minsta lådorna om möjligt (får plats bättre i bilen)
-- Om hämtning av Sportidentpinnar/brickor, kontrollera ifall brickor saknas och inte har markerats (de brukar markeras med gult om de saknas)
+* Kontrollera så att router kommer med (om beställd)
+* Laserskrivare finns i lådor av olika storlek, ta de minsta lådorna om möjligt (får plats bättre i bilen)
+* Om hämtning av Sportidentpinnar/brickor, kontrollera ifall brickor saknas och inte har markerats (de brukar markeras med gult om de saknas)
 
 
 == Förberedelser samt torrkörning av datorer
 
 Ett par dagar innan tillfället: Hör med sekreteriatet vilken OLA-version de har använt vid skapande av tävling.
 
-Installera/uppgradera datorer med den OLA-version som ska användas. 
-OLA-version: 5.10.1
+Installera/uppgradera datorer med den OLA-version som ska användas::
+OLA-version för tävling: 5.10.1
 
---- Programmera (ställa tid) på master SI-enhet (kontroll)
----- Ställ in klockan på serverdator
----- Sportident config se bild
+Programmera (ställa tid) på master SI-enhet (kontroll)::
+. Ställ in klockan på serverdator
+. Sportident config, se bild
 
-Trådlös router
-- WLAN: SSID GOF_ASUS, WPA2 OLGOFOLGOF
-- Router fast IP 192.168.18.101/24
-- delar ut 192.168.18.102 - 192.168.18.254
-- login: admin/admin2
+Trådlös router::
+* WLAN: SSID GOF_ASUS, WPA2 OLGOFOLGOF
+* Router fast IP 192.168.18.101/24
+* delar ut 192.168.18.102 - 192.168.18.254
+* login: admin/admin2
 
-Datorer:
-192.168.18.32  GOF32 Server
-192.168.18.23  GOF23 Mål + Skrivare 1
-192.168.18.24  GOF24 Mål + Skrivare 2
-192.168.18.    GOF27 Direktanmälan
-192.168.18.180 GOF31 Direktanmälan
-192.168.18.    GOF34 Speaker + 2 målenheter
-192.168.18.    GOF35 Speaker
-192.168.18.33  GOF33 Ändringsdator
-192.168.18.36  GOF36 Utskrifter
-
-Datorer lösenord:
-- GOF/GOF
-- Admin/GOF (gamla), Admin/IPSkogen (nya)
+Datorer::
+Nedan tabell sammanställer vilka datorer som används under tävling
 
 
-Direktanmälan:
-- wifi
-- en master per dator, ställ in COM-port, kolla att bricknummer läses in
+[width="100%",options="header"]
+|====================
+|IP-address  |Namn  |Används som |Wifi  
+|192.168.18.32 |GOF32 |Server | Nej 
+|192.168.18.23 |GOF23 |Mål + Skrivare 1 | Nej 
+|192.168.18.24 |GOF24 |Mål + Skrivare 2 | Nej 
+|192.168.18. |GOF27 |Direktanmälan | Nej 
+|192.168.18.180 |GOF31 |Direktanmälan | Nej 
+|192.168.18. |GOF34 |Speaker + 2 målenheter | Ja 
+|192.168.18. |GOF35 |Speaker | Ja
+|192.168.18. |GOF33 |Ändringsdator | Ja
+|192.168.18. |GOF36 |Utskrifter | Ja
+|====================
 
-Måldatorer:
-- tråd i husvagn (dra lång kabel mellan vagnarna)
-- en master per dator, kolla COM-port
-- koppla in skrivare i USB längst upp höger sida (Skrivare 1 -> GOF23, Skrivare 2 --> GOF24)
-- testa utskrift enklast genom att köra MeOS och välja en deltagare på
+Datorer lösenord::
+* GOF/GOF
+* Admin/GOF (gamla), Admin/IPSkogen (nya)
+
+
+Direktanmälan::
+* wifi
+* en master per dator, ställ in COM-port, kolla att bricknummer läses in
+
+Måldatorer::
+* tråd i husvagn (dra lång kabel mellan vagnarna)
+* en master per dator, kolla COM-port
+* koppla in skrivare i USB längst upp höger sida (Skrivare 1 -> GOF23, Skrivare 2 --> GOF24)
+* testa utskrift enklast genom att köra MeOS och välja en deltagare på
   någon gammal tävling
-- utskrift från OLA kräver pinne som är registrerad i tävlingen
+* utskrift från OLA kräver pinne som är registrerad i tävlingen
 
-Speaker:
+Speaker::
 - wifi
 - 2 x målenhet + lång kabel + serial-to-USB till samma dator
 - den andra är enbart för OLA klient
 
-Server:
+Server::
 - ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server
 - kör PingInfoView mot alla klienter
 - kör LiveResults_client direkt mot databasens .h2-fil
@@ -127,17 +138,17 @@ Server:
   * om server IP ej pingbar: avancerade delningsinställningar ->
     aktiver fil och skrivardelning.
 
-Föreberedelser:
+== Föreberedelser kontroller
 
-Timemaster, togglar mellan tre funktioner:
-- TIMEMA: ställ bara tid
-- EXT MA: ställ tid + rensa backupminne
-- STD MA: ställ tid, rensa backup och återställ till
-  standardinställningar (2 timmar vakentid)
-- använd EXT MA!
-- ställ allt efter TimeMastern:
-  * alla kontroller
-  * alla start/mål-enheter
-  * de gamla målenheterna
-  * alla datorer
+Timemaster, togglar mellan tre funktioner::
+* TIMEMA: ställ bara tid
+* EXT MA: ställ tid + rensa backupminne
+* STD MA: ställ tid, rensa backup och återställ till
+* standardinställningar (2 timmar vakentid)
+* använd EXT MA!
+* ställ allt efter TimeMastern:
+** alla kontroller
+** alla start/mål-enheter
+** de gamla målenheterna
+** alla datorer
 
