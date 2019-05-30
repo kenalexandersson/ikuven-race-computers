@@ -271,7 +271,7 @@ image::ola-klient-serieportsinst-mål2.png[]
 
 . Kontrollera att utskrift från skrivare sker automatiskt för den registrerade löparen
 .. Felsökning skrivare: Om inte skrivare inte dyker upp i förteckningen över skrivare, starta om och se till att skrivaren är påslagen innan omstart sker
-.. Felsökning om målgång inte registreras men skrivare inte skriver ut: GOF23 och GOF24 har glappkänsliga kontakter för nätverkskabel, prova att trycka in kabel ordentligt, läs sedan om pinnen
+.. Felsökning om målgång registreras men skrivare inte skriver ut: GOF23 och GOF24 har glappkänsliga kontakter för nätverkskabel, prova att trycka in kabel ordentligt, läs sedan om pinnen
 
 === Speakerdatorer
 - wifi
