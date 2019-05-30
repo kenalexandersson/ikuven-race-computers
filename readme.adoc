@@ -1,4 +1,5 @@
 :toc: left
+:imagesdir: screenshots
 
 = Datoransvarig vid orienteringstävling
 
@@ -127,29 +128,66 @@ Nedan tabell sammanställer vilka datorer som brukar användas under tävling
 
 === Server
 
-Börja med att förbereda OLA-server. För att serverprogrammet ska svara korrekt, måste tävling skapas. Detta görs genom att först start OLA-klient och skapa tävling där.
+Börja med att förbereda OLA-server. För att serverprogrammet ska svara korrekt, måste tävling skapas. Detta görs genom att först starta OLA-klient och skapa en tävling där.
 
-. Starta OLA-klient
+. Starta OLA-Klient
 
-. Välj skapa tävling från Eventor
-.. Logga in på eventor och välj aktuell tävling
-.. Stäng ner OLA-klient när klar
+. Välj _Arkiv -> Ny tävling..._ 
 
-. Starta OLA-server
+. Välj _Importera tävling från Eventor_, klicka _Nästa_
 
-. Välj Meny -> Återställ databas
-.. Använd uppdaterad fil för tävlingen från tävlingssekreteraren
+. Ange _Användare_ och _Lösenord_ (Eventor), klicka _Nästa_
 
-. Klicka på Kör server
+. Välj tävling att importera (dvs den kommande tävlingen), Klicka _Nästa_
 
-. Gå till annan dator, öppna webbläsare och ange http://192.168.18.32:8080
-.. Kontakt med servern är upprättad om man kan se en välkomstsida för OLA.
+. I lista över vad som kan importeras från eventor, välj allt.
++
+[WARNING]
+Notera att det kan ta några minuter att tanka ner samtliga namn etc
+
+. Välj Databasverktyg -> Återställ databas
+
+. Peka ut fil att återställa, klicka _Återställ_
++
+image::ola-server-återställ.png[]
+.. Förväntat: Databas återställd utan fel!
++
+[NOTE]
+====
+Om inte tävling dyker upp i dropdown
+
+. _Databasverktyg -> Databasinställningar_
+. Använd inbyggd
+. Klicka _Sök_, vänta lite
++
+image::ola-server-sök-tävling.png[]
+. Välj tävling när den dyker
+. Klicka Spara
+====
+
+. Klicka Start för att starta server
++
+image::ola-server-running.png[]
+
+. Prova att server är nåbar från annan dator
+.. Från annan dator, starta webbläsare och ange http://<ip-adress>:8080 (t ex http://192.168.18.32:8080)
++
+image::ola-server-welcome.png[]
 .. Om ingen kontakt, se <<netnot>>
 
-==== På tävlingsdagen
-* Ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server
-* Kör PingInfoView mot alla klienter
-* Kör LiveResults_client direkt mot databasens .h2-fil
+Koppla OLA-Klient mot OLA-Server
+
+. Starta OLA-Klient
+
+. Välj flik OLA Server
+
+. Ange server IP i Dator URL
+.. Notera att man måste klicka sig ur fältet innan programmet försöker koppla
+.. Om server var avstängd i föregående steg, men sedan startad: Välj då en godtycklig sista siffra, tabba ur, vänta på timeout, ange sedan rätt server IP igen, tabba ut.
++
+image::ola-klient-open-from-server.png[]
+
+. Klicka OK
 
 [#netnot]
 === Nätverksrelaterade noteringar (server)
@@ -174,25 +212,28 @@ Ställa in master (avläsare)::
 
 . Se till att OLA-klient är startad och uppkopplad mot server
 
+. Gå till Direktanmälan
++
+image::ola-klient-testa-direktanm.png[]
+
 . Koppla in master till dator i USB-uttag
 
-. Starta Sportindent Config+
-.. I övre vänstra hörnet står det vilken COM-port som enheten använder, samt vilken hastighet
+. Starta Sportident Config+
+.. Ta reda på COM port samt hastighet
+.. Stäng ner
 
-. I OLA, öppna fönster Under Tävling->Direktanmälan
+. I OLA-Klient, Registrera direktanmälan, välj ikon för Serieportsinställningar
++
+image::ola-klient-serieportsinst.png[]
++
+image::ola-klient-serieportsinst2.png[]
 
-. Klicka på ikon för COM-port
+. Klicka _Lägg till_
 
-. I dropdown, välj SI (inte emit!)
+. Klicka _OK_
 
-. Välj COM-port som erhölls i steg 3a
-
-. Välj hastighet som erhölls i steg 3a
-
-. Klicka OK
-
-. Använd en SI-pinne i master
-.. Förväntat resultat: Att pinnen registreras och att bricknummer läses in
+. Använd en sportidentbricka i avläsare och kontrollera att Bricknummer kommer upp i vy
+.. Grön plupp också
 
 
 === Måldatorer
@@ -204,6 +245,33 @@ Ställa in master (avläsare)::
   någon gammal tävling
 * utskrift från OLA kräver pinne som är registrerad i tävlingen
 
+Testa avläsare i måldator
+
+. Gå till Brickinläsning Sportident
++
+image::ola-klient-läs-bricka-målgång.png[]
+
+. Starta Sportident Config+
+.. Ta reda på COM port samt hastighet
+.. Stäng ner
+
+. I OLA-Klient, Brickinläsning Sportident, välj ikon för Serieportsinställningar
++
+image::ola-klient-serieportsinst-mål.png[]
++
+image::ola-klient-serieportsinst-mål2.png[]
+
+. Klicka _Lägg till_
+
+. Klicka _OK_
+
+. Använd en sportidentbricka  i avläsare och kontrollera att registrering kommer upp
+.. OBS: Brickan måste ha en löpare registrerad i tävlingen
+.. Grön plupp också
+
+. Kontrollera att utskrift från skrivare sker automatiskt för den registrerade löparen
+.. Felsökning skrivare: Om inte skrivare inte dyker upp i förteckningen över skrivare, starta om och se till att skrivaren är påslagen innan omstart sker
+.. Felsökning om målgång inte registreras men skrivare inte skriver ut: GOF23 och GOF24 har glappkänsliga kontakter för nätverkskabel, prova att trycka in kabel ordentligt, läs sedan om pinnen
 
 === Speakerdatorer
 - wifi
@@ -211,6 +279,8 @@ Ställa in master (avläsare)::
 - den andra är enbart för OLA klient
 
 === Föreberedelser kontroller
+
+TODO
 
 Timemaster, togglar mellan tre funktioner::
 * TIMEMA: ställ bara tid
@@ -232,7 +302,9 @@ Prio-ordning::
 . Direktanmälan
 . Speaker, Målenheter, Ändring
 . Utskrift
-. Live-resultat
+. Ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server
+. Kör PingInfoView mot alla klienter
+. Starta live-resultat, se <<LiveResult>>
 
 När allt uppkopplat - lägg in slutgiltiga IP-adresser i PingInfoView.
 
@@ -243,4 +315,61 @@ Routern används för att övriga datorer i det lokala nätverket ska kunna kopp
 [TIP]
 Sträva efter att koppla upp Måldatorer samt Direktanmälandatorer med ethernetkablar om möjligt. Det finns en switch i nätverkslådan som kan användas om det blir trångt i routern.
 
+=== LiveResult
 
+. Ladda ner och zippa upp LiveResults Client från https://liveresults.github.io/documentation/
+
+. Gå till http://liveresultat.orientering.se/adm/admincompetitions.php och skapa tävling
+.. Klicka Create new competition
+.. Fyll i tävlingens namn, organisatör (IK Uven) samt datum
+.. Klicka på Create
+
+. Leta upp tävlingen i listan på https://liveresultat.orientering.se/adm/admincompetitions.php
+.. Klicka Edit
+.. Kryssa i Public
+.. Notera CompetitionID (att använda i kommande steg)
++
+image::Liveresults-comp-id.png[]
+.. Klicka Save
+
+. Starta programmet LiveResults.Client. Välj OLA SOFT
+
+. Välj OLA Intern Databas i dropdown
++
+[WARNING]
+====
+När man använder OLAs interna databas är det *mycket viktigt* att en annan OLA-klient är ansluten till denna databas *INNAN* du startar liveresultat-klienten mot den.
+
+När fler än en anslutning sker mot databasen kommer den första anslutningen agera proxy för alla andra anslutningar varför all trafik mot databasen då kommer gå genom denna dator.
+====
+
+. Välj tävlingens datbasfil
+.. Sökväg Windows XP: `C:\Documents and Settings\All Users\OLA5\db`
+.. Sökväg Windows 7/8/10: `C:\ProgramData\OLA5\db`
++
+image::Liveresults-valj-db-fil.png[]
+
+. OBS! Ta bort ändelsen .mv-db från sökvägen:
++
+image::Liveresults-new-ola-conn.png[]
+
+. Klicka Next
+
+. Välj Event, klicka Next 
+
+. Välj Etapp, klicka Next 
+
+. Fyll i CompetitionID (från steg 3c) och Name, Klicka sedan Finish
+
+. Klicka Start
+.. Liveresults-monitor-start
+.. Nu startar uppladdningen till LiveResult och fortsätter tills man stänger ner
+
+. Lägg upp länk på tävlingens sida på Eventor
+.. Gå in på https://liveresultat.orientering.se och klicka in på tävlingen
+.. Kopiera länken för tävlingen från webbläsare
+.. Logga in på Eventor (måste ha admin eller tävlingsarr rättighet)
+.. Gå till tävlingssida och skapa ny länk (under Dokument och länkar)
+.. Förväntat resultat:
++
+image::Liveresults-eventor.png[]
