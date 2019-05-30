@@ -125,6 +125,14 @@ Nedan tabell sammanställer vilka datorer som brukar användas under tävling
 * GOF/GOF
 * Admin/GOF (gamla), Admin/IPSkogen (nya)
 
+[IMPORTANT]
+====
+Sträva efter att använda GOF så långt som möjligt
+
+Det är mycket viktigt att samma användare på en dator används vid både torrkörning och på tävlingsdagen. Om inställningar görs i OLA för GOF under torrkörning, men man sedan använder Admin på tävling, kommer dessa inställningar inte att läsas in.
+
+Detta skapar garanterat förvirring, så grundregel: Användare X vid torrkörning, använder X på tävlingsdagen.
+====
 
 === Server
 
@@ -162,7 +170,7 @@ Om inte tävling dyker upp i dropdown
 +
 image::ola-server-sök-tävling.png[]
 . Välj tävling när den dyker
-. Klicka Spara
+. Klicka _Spara_
 ====
 
 . Klicka Start för att starta server
@@ -179,7 +187,7 @@ Koppla OLA-Klient mot OLA-Server
 
 . Starta OLA-Klient
 
-. Välj flik OLA Server
+. Välj flik _OLA Server_
 
 . Ange server IP i Dator URL
 .. Notera att man måste klicka sig ur fältet innan programmet försöker koppla
@@ -187,7 +195,7 @@ Koppla OLA-Klient mot OLA-Server
 +
 image::ola-klient-open-from-server.png[]
 
-. Klicka OK
+. Klicka _OK_
 
 [#netnot]
 === Nätverksrelaterade noteringar (server)
@@ -296,7 +304,8 @@ Timemaster, togglar mellan tre funktioner::
 
 == Tävlingsdagen
 
-Prio-ordning::
+=== Prio-ordning
+
 . Server + Router + uppkoppling till internet via telefon eller surfplatta
 . Måldatorer inkl. kabel till målvagn
 . Direktanmälan
@@ -320,21 +329,23 @@ Sträva efter att koppla upp Måldatorer samt Direktanmälandatorer med ethernet
 . Ladda ner och zippa upp LiveResults Client från https://liveresults.github.io/documentation/
 
 . Gå till http://liveresultat.orientering.se/adm/admincompetitions.php och skapa tävling
-.. Klicka Create new competition
+.. Klicka _Create new competition_
 .. Fyll i tävlingens namn, organisatör (IK Uven) samt datum
-.. Klicka på Create
+.. Klicka på _Create_
 
 . Leta upp tävlingen i listan på https://liveresultat.orientering.se/adm/admincompetitions.php
-.. Klicka Edit
+.. Klicka _Edit_
 .. Kryssa i Public
 .. Notera CompetitionID (att använda i kommande steg)
 +
 image::Liveresults-comp-id.png[]
-.. Klicka Save
+.. Klicka _Save_
 
-. Starta programmet LiveResults.Client. Välj OLA SOFT
+. Starta programmet LiveResults.Client. 
 
-. Välj OLA Intern Databas i dropdown
+. Välj _OLA SOFT_
+
+. Välj _OLA Intern Databas_ i dropdown
 +
 [WARNING]
 ====
@@ -353,15 +364,15 @@ image::Liveresults-valj-db-fil.png[]
 +
 image::Liveresults-new-ola-conn.png[]
 
-. Klicka Next
+. Klicka _Next_
 
-. Välj Event, klicka Next 
+. Välj Event, klicka _Next_
 
-. Välj Etapp, klicka Next 
+. Välj Etapp, klicka _Next_
 
 . Fyll i CompetitionID (från steg 3c) och Name, Klicka sedan Finish
 
-. Klicka Start
+. Klicka _Start_
 +
 image::Liveresults-monitor-start.png[]
 +
