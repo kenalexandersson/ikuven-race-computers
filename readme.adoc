@@ -362,8 +362,10 @@ image::Liveresults-new-ola-conn.png[]
 . Fyll i CompetitionID (från steg 3c) och Name, Klicka sedan Finish
 
 . Klicka Start
-.. Liveresults-monitor-start
-.. Nu startar uppladdningen till LiveResult och fortsätter tills man stänger ner
++
+image::Liveresults-monitor-start.png[]
++
+Nu startar uppladdningen till LiveResult och fortsätter tills man stänger ner
 
 . Lägg upp länk på tävlingens sida på Eventor
 .. Gå in på https://liveresultat.orientering.se och klicka in på tävlingen
