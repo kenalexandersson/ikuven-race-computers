@@ -95,7 +95,7 @@ OLA-version för tävling: 5.10.1
 . Starta Sportident config+
 . Välj Klocka _TODO: Hur gjorde vi här?_
 +
-image::configplus-ställ-klocka.jpg[]
+image::configplus-ställ-klocka.png[]
 
 
 === Trådlös router
