@@ -424,6 +424,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
 /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
@@ -539,9 +540,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_datorer">Datorer</a></li>
 <li><a href="#_datorer_lösenord">Datorer lösenord</a></li>
 <li><a href="#_server">Server</a></li>
-<li><a href="#netnot">Nätverksrelaterade noteringar (server)</a></li>
-<li><a href="#_direktanmälan">Direktanmälan</a></li>
 <li><a href="#_måldatorer">Måldatorer</a></li>
+<li><a href="#_direktanmälan">Direktanmälan</a></li>
 <li><a href="#_speakerdatorer">Speakerdatorer</a></li>
 <li><a href="#_föreberedelser_kontroller">Föreberedelser kontroller</a></li>
 </ul>
@@ -654,7 +654,7 @@ table.CodeRay td.code>pre{padding:0}
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
@@ -708,7 +708,7 @@ speakerstöd beställas, i regel två stycken.</p>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Be om att få beställningsdokument från föregående tävling, antingen från tidigare datoransvarig alternativt arenaansvarig.
@@ -759,7 +759,7 @@ Be om att få beställningsdokument från föregående tävling, antingen från 
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens Eventor-sida kan ladda ner OLA.
@@ -781,10 +781,21 @@ Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ställ in klockan på serverdator</p>
+<p>Verifiera/ställ in klockan så att den är synkad på serverdator</p>
 </li>
 <li>
-<p>Sportident config, se bild</p>
+<p>Koppla in master SI-enhet till servern</p>
+</li>
+<li>
+<p>Starta Sportident config+</p>
+</li>
+<li>
+<p>Välj Klocka <em>TODO: Hur gjorde vi här?</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/configplus-ställ-klocka.jpg" alt="configplus ställ klocka">
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -794,7 +805,13 @@ Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens 
 <div class="ulist">
 <ul>
 <li>
-<p>WLAN: SSID GOF_ASUS, WPA2, lösenord: OLGOFOLGOF</p>
+<p>SSID: GOF_ASUS</p>
+</li>
+<li>
+<p>WPA2</p>
+</li>
+<li>
+<p>Lösenord: OLGOFOLGOF</p>
 </li>
 <li>
 <p>Router fast IP 192.168.18.101/24</p>
@@ -818,17 +835,15 @@ Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens 
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">IP-address</th>
 <th class="tableblock halign-left valign-top">Namn</th>
 <th class="tableblock halign-left valign-top">Används som</th>
-<th class="tableblock halign-left valign-top">Wifi</th>
 </tr>
 </thead>
 <tbody>
@@ -836,55 +851,46 @@ Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens 
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nej</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.23</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF23</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Mål + Skrivare 1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nej</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.24</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF24</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Mål + Skrivare 2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nej</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF27</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Direktanmälan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nej</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF31</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Direktanmälan</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nej</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF34</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Speaker + 2 målenheter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF35</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Speaker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF33</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ändringsdator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">192.168.18.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GOF36</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Utskrifter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ja</p></td>
 </tr>
 </tbody>
 </table>
@@ -905,7 +911,7 @@ Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens 
 <table>
 <tr>
 <td class="icon">
-<div class="title">Important</div>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -950,7 +956,7 @@ Endast <em>Administratör</em> eller <em>Arrangemengsansvarig</em> på klubbens 
 <table>
 <tr>
 <td class="icon">
-<div class="title">Warning</div>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 Notera att det kan ta några minuter att tanka ner samtliga namn etc
@@ -959,6 +965,13 @@ Notera att det kan ta några minuter att tanka ner samtliga namn etc
 </table>
 </div>
 </li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Tävlingssekreteraren har oftast en dagsfärsk tävlingsfil, importera denna till OLA-Server</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Välj Databasverktyg &#8594; Återställ databas</p>
 </li>
@@ -977,7 +990,7 @@ Notera att det kan ta några minuter att tanka ner samtliga namn etc
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1077,9 +1090,8 @@ Notera att det kan ta några minuter att tanka ner samtliga namn etc
 </li>
 </ol>
 </div>
-</div>
-<div class="sect2">
-<h3 id="netnot">Nätverksrelaterade noteringar (server)</h3>
+<div class="sect3">
+<h4 id="netnot">Nätverksrelaterade noteringar (server)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1099,111 +1111,31 @@ aktivera fil och skrivardelning.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_direktanmälan">Direktanmälan</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>wifi</p>
-</li>
-<li>
-<p>en master per dator, ställ in COM-port, kolla att bricknummer läses in</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Ställa in master (avläsare)</dt>
-<dd>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Se till att OLA-klient är startad och uppkopplad mot server</p>
-</li>
-<li>
-<p>Gå till Direktanmälan</p>
-<div class="imageblock">
-<div class="content">
-<img src="./images/ola-klient-testa-direktanm.png" alt="ola klient testa direktanm">
-</div>
-</div>
-</li>
-<li>
-<p>Koppla in master till dator i USB-uttag</p>
-</li>
-<li>
-<p>Starta Sportident Config+</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Ta reda på COM port samt hastighet</p>
-</li>
-<li>
-<p>Stäng ner</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>I OLA-Klient, Registrera direktanmälan, välj ikon för Serieportsinställningar</p>
-<div class="imageblock">
-<div class="content">
-<img src="./images/ola-klient-serieportsinst.png" alt="ola klient serieportsinst">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/ola-klient-serieportsinst2.png" alt="ola klient serieportsinst2">
-</div>
-</div>
-</li>
-<li>
-<p>Klicka <em>Lägg till</em></p>
-</li>
-<li>
-<p>Klicka <em>OK</em></p>
-</li>
-<li>
-<p>Använd en sportidentbricka i avläsare och kontrollera att Bricknummer kommer upp i vy</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Grön plupp också</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_måldatorer">Måldatorer</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>tråd i husvagn (dra lång kabel mellan vagnarna)</p>
+<p>Använder oftast tråd i husvagn (dra lång kabel mellan vagnarna)</p>
 </li>
 <li>
-<p>en master per dator, kolla COM-port</p>
+<p>En master per dator</p>
 </li>
 <li>
-<p>koppla in skrivare i USB längst upp höger sida (Skrivare 1 &#8594; GOF23, Skrivare 2 &#8594; GOF24)</p>
+<p>Koppla in skrivare i USB längst upp höger sida (Skrivare 1 &#8594; GOF23, Skrivare 2 &#8594; GOF24)</p>
 </li>
 <li>
-<p>testa utskrift enklast genom att köra MeOS och välja en deltagare på
+<p>Testa utskrift enklast genom att köra MeOS och välja en deltagare på
 någon gammal tävling</p>
 </li>
 <li>
-<p>utskrift från OLA kräver pinne som är registrerad i tävlingen</p>
+<p>Utskrift från OLA kräver pinne som är registrerad i tävlingen</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Testa avläsare i måldator</p>
-</div>
+<div class="sect3">
+<h4 id="_testa_avläsare_i_måldator">Testa avläsare i måldator</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1273,6 +1205,79 @@ någon gammal tävling</p>
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_direktanmälan">Direktanmälan</h3>
+<div class="paragraph">
+<p>Direktanmälan använder datorer för att registrera deltagare på plats under tävlingen.</p>
+</div>
+<div class="paragraph">
+<p>Det behövs en master per dator som ska användas, ställ in COM-port, kolla att bricknummer läses in</p>
+</div>
+<div class="sect3">
+<h4 id="_ställa_in_master_avläsare">Ställa in master (avläsare)</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Se till att OLA-klient är startad och uppkopplad mot server</p>
+</li>
+<li>
+<p>Gå till Direktanmälan</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/ola-klient-testa-direktanm.png" alt="ola klient testa direktanm">
+</div>
+</div>
+</li>
+<li>
+<p>Koppla in master till dator i USB-uttag</p>
+</li>
+<li>
+<p>Starta Sportident Config+</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Ta reda på COM port samt hastighet</p>
+</li>
+<li>
+<p>Stäng ner</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>I OLA-Klient, Registrera direktanmälan, välj ikon för Serieportsinställningar</p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/ola-klient-serieportsinst.png" alt="ola klient serieportsinst">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/ola-klient-serieportsinst2.png" alt="ola klient serieportsinst2">
+</div>
+</div>
+</li>
+<li>
+<p>Klicka <em>Lägg till</em></p>
+</li>
+<li>
+<p>Klicka <em>OK</em></p>
+</li>
+<li>
+<p>Använd en sportidentbricka i avläsare och kontrollera att Bricknummer läses in och visas i vy</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Grön plupp också</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1370,7 +1375,7 @@ någon gammal tävling</p>
 <p>Ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server</p>
 </li>
 <li>
-<p>Kör PingInfoView mot alla klienter</p>
+<p>Kör PingInfoView mot alla klienter. Ladda ner från <a href="https://www.nirsoft.net/utils/pinginfoview.zip" class="bare">https://www.nirsoft.net/utils/pinginfoview.zip</a></p>
 </li>
 <li>
 <p>Starta live-resultat, se <a href="#_liveresult">LiveResult</a></p>
@@ -1390,7 +1395,7 @@ någon gammal tävling</p>
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Sträva efter att koppla upp Måldatorer samt Direktanmälandatorer med ethernetkablar om möjligt. Det finns en switch i nätverkslådan som kan användas om det blir trångt i routern.
@@ -1458,7 +1463,7 @@ Sträva efter att koppla upp Måldatorer samt Direktanmälandatorer med ethernet
 <table>
 <tr>
 <td class="icon">
-<div class="title">Warning</div>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1556,7 +1561,7 @@ Sträva efter att koppla upp Måldatorer samt Direktanmälandatorer med ethernet
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-05-31 18:58:50 CEST
+Last updated 2019-05-31 20:16:44 CEST
 </div>
 </div>
 </body>

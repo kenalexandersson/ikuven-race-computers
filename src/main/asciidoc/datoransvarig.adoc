@@ -90,13 +90,19 @@ OLA-version för tävling: 5.10.1
 
 === Ställ tid på master SI-enhet (kontroll)
 
-. Ställ in klockan på serverdator
-. Sportident config, se bild
+. Verifiera/ställ in klockan så att den är synkad på serverdator
+. Koppla in master SI-enhet till servern
+. Starta Sportident config+
+. Välj Klocka _TODO: Hur gjorde vi här?_
++
+image::configplus-ställ-klocka.jpg[]
 
 
 === Trådlös router
 
-* WLAN: SSID GOF_ASUS, WPA2, lösenord: OLGOFOLGOF
+* SSID: GOF_ASUS
+* WPA2
+* Lösenord: OLGOFOLGOF
 * Router fast IP 192.168.18.101/24
 * delar ut 192.168.18.102 - 192.168.18.254
 * login: admin/admin2
@@ -108,18 +114,18 @@ Koppla router till serverdator med nätverkskabel
 Nedan tabell sammanställer vilka datorer som brukar användas under tävling
 
 [width="100%",options="header"]
-|====================
-|IP-address  |Namn  |Används som |Wifi  
-|192.168.18.32 |GOF32 |Server | Nej 
-|192.168.18.23 |GOF23 |Mål + Skrivare 1 | Nej 
-|192.168.18.24 |GOF24 |Mål + Skrivare 2 | Nej 
-|192.168.18. |GOF27 |Direktanmälan | Nej 
-|192.168.18. |GOF31 |Direktanmälan | Nej 
-|192.168.18. |GOF34 |Speaker + 2 målenheter | Ja 
-|192.168.18. |GOF35 |Speaker | Ja
-|192.168.18. |GOF33 |Ändringsdator | Ja
-|192.168.18. |GOF36 |Utskrifter | Ja
-|====================
+|===
+|IP-address  |Namn  |Används som
+|192.168.18.32 |GOF32 |Server
+|192.168.18.23 |GOF23 |Mål + Skrivare 1
+|192.168.18.24 |GOF24 |Mål + Skrivare 2
+|192.168.18. |GOF27 |Direktanmälan
+|192.168.18. |GOF31 |Direktanmälan
+|192.168.18. |GOF34 |Speaker + 2 målenheter
+|192.168.18. |GOF35 |Speaker
+|192.168.18. |GOF33 |Ändringsdator
+|192.168.18. |GOF36 |Utskrifter
+|===
 
 === Datorer lösenord
 * GOF/GOF
@@ -152,6 +158,8 @@ Börja med att förbereda OLA-server. För att serverprogrammet ska svara korrek
 +
 [WARNING]
 Notera att det kan ta några minuter att tanka ner samtliga namn etc
+
+Tävlingssekreteraren har oftast en dagsfärsk tävlingsfil, importera denna till OLA-Server
 
 . Välj Databasverktyg -> Återställ databas
 
@@ -198,7 +206,7 @@ image::ola-klient-open-from-server.png[]
 . Klicka _OK_
 
 [#netnot]
-=== Nätverksrelaterade noteringar (server)
+==== Nätverksrelaterade noteringar (server)
 
 * Brandvägg kan vara på, kolla Windows Defender "tillåtna appar":
     Java (OLA) får inte vara blockerad i lång lista (sortera på block/allow)
@@ -210,50 +218,16 @@ image::ola-klient-open-from-server.png[]
 * Om server IP ej pingbar: avancerade delningsinställningar ->
     aktivera fil och skrivardelning.
 
-
-=== Direktanmälan
-
-* wifi
-* en master per dator, ställ in COM-port, kolla att bricknummer läses in
-
-Ställa in master (avläsare)::
-
-. Se till att OLA-klient är startad och uppkopplad mot server
-
-. Gå till Direktanmälan
-+
-image::ola-klient-testa-direktanm.png[]
-
-. Koppla in master till dator i USB-uttag
-
-. Starta Sportident Config+
-.. Ta reda på COM port samt hastighet
-.. Stäng ner
-
-. I OLA-Klient, Registrera direktanmälan, välj ikon för Serieportsinställningar
-+
-image::ola-klient-serieportsinst.png[]
-+
-image::ola-klient-serieportsinst2.png[]
-
-. Klicka _Lägg till_
-
-. Klicka _OK_
-
-. Använd en sportidentbricka i avläsare och kontrollera att Bricknummer kommer upp i vy
-.. Grön plupp också
-
-
 === Måldatorer
 
-* tråd i husvagn (dra lång kabel mellan vagnarna)
-* en master per dator, kolla COM-port
-* koppla in skrivare i USB längst upp höger sida (Skrivare 1 -> GOF23, Skrivare 2 -> GOF24)
-* testa utskrift enklast genom att köra MeOS och välja en deltagare på
+* Använder oftast tråd i husvagn (dra lång kabel mellan vagnarna)
+* En master per dator
+* Koppla in skrivare i USB längst upp höger sida (Skrivare 1 -> GOF23, Skrivare 2 -> GOF24)
+* Testa utskrift enklast genom att köra MeOS och välja en deltagare på
   någon gammal tävling
-* utskrift från OLA kräver pinne som är registrerad i tävlingen
+* Utskrift från OLA kräver pinne som är registrerad i tävlingen
 
-Testa avläsare i måldator
+==== Testa avläsare i måldator
 
 . Gå till Brickinläsning Sportident
 +
@@ -280,6 +254,39 @@ image::ola-klient-serieportsinst-mål2.png[]
 . Kontrollera att utskrift från skrivare sker automatiskt för den registrerade löparen
 .. Felsökning skrivare: Om inte skrivare inte dyker upp i förteckningen över skrivare, starta om och se till att skrivaren är påslagen innan omstart sker
 .. Felsökning om målgång registreras men skrivare inte skriver ut: GOF23 och GOF24 har glappkänsliga kontakter för nätverkskabel, prova att trycka in kabel ordentligt, läs sedan om pinnen
+
+=== Direktanmälan
+
+Direktanmälan använder datorer för att registrera deltagare på plats under tävlingen.
+
+Det behövs en master per dator som ska användas, ställ in COM-port, kolla att bricknummer läses in
+
+==== Ställa in master (avläsare)
+
+. Se till att OLA-klient är startad och uppkopplad mot server
+
+. Gå till Direktanmälan
++
+image::ola-klient-testa-direktanm.png[]
+
+. Koppla in master till dator i USB-uttag
+
+. Starta Sportident Config+
+.. Ta reda på COM port samt hastighet
+.. Stäng ner
+
+. I OLA-Klient, Registrera direktanmälan, välj ikon för Serieportsinställningar
++
+image::ola-klient-serieportsinst.png[]
++
+image::ola-klient-serieportsinst2.png[]
+
+. Klicka _Lägg till_
+
+. Klicka _OK_
+
+. Använd en sportidentbricka i avläsare och kontrollera att Bricknummer läses in och visas i vy
+.. Grön plupp också
 
 === Speakerdatorer
 - wifi
@@ -312,7 +319,7 @@ Timemaster, togglar mellan tre funktioner::
 . Speaker, Målenheter, Ändring
 . Utskrift
 . Ställ in backup-katalog till USB-pinne + backup var 10:e minut i OLA Server
-. Kör PingInfoView mot alla klienter
+. Kör PingInfoView mot alla klienter. Ladda ner från https://www.nirsoft.net/utils/pinginfoview.zip
 . Starta live-resultat, se <<LiveResult>>
 
 När allt uppkopplat - lägg in slutgiltiga IP-adresser i PingInfoView.
