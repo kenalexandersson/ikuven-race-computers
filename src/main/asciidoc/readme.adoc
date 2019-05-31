@@ -1,5 +1,5 @@
 :toc: left
-:imagesdir: screenshots
+:imagesdir: ./images
 
 = Datoransvarig vid orienteringstävling
 
