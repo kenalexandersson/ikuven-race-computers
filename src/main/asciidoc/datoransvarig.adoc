@@ -15,6 +15,8 @@ Arenaansvarig sköter den totala beställningen mot IK Uven, vilken läggs senas
 ** Antal tävlingsdatorer
 ** Antal måldatorer för avläsning
 
+Vanligtvis behövs 2 stycken måldatorer och 7 stycken tävlingsdatorer.
+
 Typiska användningsområden för tävlingsdatorer
 
 * 1 som agerar OLA-server som övriga kopplar upp sig till
