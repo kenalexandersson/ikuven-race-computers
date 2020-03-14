@@ -104,7 +104,7 @@ image::configplus-ställ-klocka.png[]
 
 * SSID: GOF_ASUS
 * WPA2
-* Lösenord: OLGOFOLGOF
+* Lösenord: Se kartong för router
 * Router fast IP 192.168.18.101/24
 * delar ut 192.168.18.102 - 192.168.18.254
 * login: admin/admin2
@@ -130,8 +130,8 @@ Nedan tabell sammanställer vilka datorer som brukar användas under tävling
 |===
 
 === Datorer lösenord
-* GOF/GOF
-* Admin/GOF (gamla), Admin/IPSkogen (nya)
+* GOF/G******
+* Admin/G****** (gamla), Admin/I****** (nya)
 
 [IMPORTANT]
 ====
